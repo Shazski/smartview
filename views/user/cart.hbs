@@ -1,0 +1,57 @@
+<section class="h-100" style="background-color: #eee;">
+  <div style="font-family: 'Times New Roman', Times, serif;" class="container h-100 py-5">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-10">
+
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <h3 style="font-family:'Times New Roman', Times, serif ;" class="fw-normal mb-0 text-black">Shopping Cart</h3>
+          {{#if msg}}
+              <h5 id="checkcart">{{msg}}</h5>
+              {{/if}}
+        </div>
+        {{#each products}}
+        <div style="border-radius:10px ;" class="card rounded-3 mb-4">
+          <div class="card-body p-4">
+            <div class="row d-flex justify-content-between align-items-center">
+              <div class="col-md-2 col-lg-2 col-xl-2">
+                <img style="border-radius: 10px;"
+                  src="/images/{{this.product._id}}.jpg"
+                  class="img-fluid rounded-3" alt="Cotton T-shirt">
+              </div>
+              <div>
+                <p>{{this.product.name}}</p>
+                <p><span id="price" >{{this.product.price}}</span>
+              </div>
+              
+              <span> <button onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',-1)" class="btn btn-primary">-</button>
+                <span id="{{this.product._id}}">{{this.quantity}}</span>
+                <button onclick="changeQuantity('{{this._id}}','{{this.product._id}}','{{../user._id}}',1)" class="btn btn-primary">+</button>
+              </span>
+
+                
+              <div>
+                
+              </div>
+            </div>
+            <hr>
+                <button style="float: right;" onclick="deleteCartItem('{{this._id}}','{{this.product._id}}')" class="btn btn-danger"><span class="fa fa-trash"></span></button>
+          </div>
+        </div>
+    {{/each}}
+        <hr>
+        {{#if total}}
+        <h5>Total Rs.<span style="color:darkmagenta ; font-family:serif; font-weight: bold;" id="total">{{total}}</span></h5>
+        {{else}}
+        <h5>Total Rs.</h5><h5>0</h5>
+        {{/if}}
+
+        <div class="card">
+          <div class="card-body">
+            <a href="/proceed-to-pay" class="btn btn-warning btn-block btn-lg">Proceed to Pay</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div style="margin-top: 100px;" class="courses_box1">
+	   <div class="container">
+	   	  <form action="/archi-reg" method="POST" class="login" enctype="multipart/form-data">
+                <p class="lead">Architecture Register</p>
+                {{#if emailExits}}
+                <p>
+                  {{emailExits}}
+                </p>
+                {{/if}}
+                <div class="form-group">
+                    <input type="text" class="required form-control" placeholder="Name*" name="archiName" value="">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="required form-control" placeholder="Password *" name="password" value="">
+                </div>
+                
+                <div class="form-group">
+                    <input type="number" class="required form-control" placeholder="Mobile *" name="mobile" value="">
+                </div>
+                
+                <div class="form-group">
+                    <input type="text"  class="required form-control" placeholder="Email *" name="email" value="">
+                    <input type="text"  class="required form-control" placeholder="Email *" name="permission" value="false" hidden>
+                </div>
+                <div class="form-group">
+                    <input type="file"  class="required form-control"name="image">
+                </div>
+               
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary btn-lg1 btn-block" name="submit" value="Register">
+                </div>
+                <p>Already have an account? <a href="/archi-login">Architecture Login</a></p>
+            </form>
+	   </div>
+	</div>
+</body>
+</html>

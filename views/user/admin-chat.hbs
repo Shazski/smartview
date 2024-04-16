@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body id="bgimage">
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">CHAT</h2>
+                <form action="/admin-chat" method="post"  enctype="multipart/form-data" >
+
+                    <label for="">Seller Name</label>
+                    <input required type="text" name="seller-name" class="form-control">
+
+                    <label for="">Seller email</label>
+                    <input required type="text" name="seller-email" class="form-control">
+
+                    <label for="exampleFormControlTextarea1">Enter message</label>
+                    <textarea required name="message" class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    
+                    <label for="">Seller documents</label>
+                    <input required type="file" name="image" class="form-control">
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>

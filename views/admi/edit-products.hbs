@@ -1,0 +1,63 @@
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 style="color:red ;" class="text-center">Edit products</h2>
+                <form action="/admin/edit-products/{{newPro._id}}" method="post" enctype="multipart/form-data">
+
+                    <label for="">plan Number</label>
+                    <input type="text" name="planNumber" class="form-control" value="{{newPro.planNumber}}">
+
+                    <label for="">Sqft</label>
+                    <input type="text" name="sqft" class="form-control" value="{{newPro.sqft}}">
+                    <label for="">Floor</label>
+                    <input type="text" name="floor" class="form-control" value="{{newPro.floor}}">
+                    <label for="">Beds</label>
+                    <input type="text" name="beds" class="form-control" value="{{newPro.beds}}">
+                    <label for="">Baths</label>
+                    <input type="text" name="baths" class="form-control" value="{{newPro.baths}}">
+
+                    <label for="">Price</label>
+                    <input type="text" name="price" class="form-control" value="{{newPro.price}}">
+
+
+                    <label for="">Image</label>
+                    <img src="/images/{{newPro._id}}.jpg" alt="" style="height:50px ;width:50px;" id="img" >
+                    <input type="file" name="image" class="form-control" onchange="editImage(event)" >
+                    <label for="">Image</label>
+                    <img src="/plan1/{{newPro._id}}.jpg" alt="" style="height:50px ;width:50px;" id="imgs" >
+                    <input type="file" name="plan1" class="form-control" onchange="editImages(event)" >
+                    <label for="">Image</label>
+                    <img src="/plan2/{{newPro._id}}.jpg" alt="" style="height:50px ;width:50px;" id="imgss" >
+                    <input type="file" name="plan2" class="form-control" onchange="editImagess(event)" >
+                    <label for="">Image</label>
+                    <img src="/plan3/{{newPro._id}}.jpg" alt="" style="height:50px ;width:50px;" id="imgsss" >
+                    <input type="file" name="plan3" class="form-control" onchange="editImagesss(event)" >
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>  
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function editImage(event){
+        document.getElementById('img').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>
+<script>
+    function editImages(event){
+        document.getElementById('imgs').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>
+<script>
+    function editImagess(event){
+        document.getElementById('imgss').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>
+<script>
+    function editImagesss(event){
+        document.getElementById('imgsss').src=URL.createObjectURL(event.target.files[0])
+    }
+</script>

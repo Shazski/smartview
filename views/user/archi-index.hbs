@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body style="background-image: url( 62862be04256997d0cfcc23e.jpg`); font-family: 'Times New Roman', Times, serif; background-image:linear-gradient(to right,rgba(0, 0, 0, 0.801),rgba(0, 0, 0, 0.73)),url(/images/63d2be9b92090ee9bc28cf18.jpg)";>
+  
+<div style="color: white;" class="container">
+    <div class="row">
+        <a href="/add-archi-elivations" class="btn btn-success ml-auto mt-3">Add elivations</a>
+    </div>
+    <div>
+      
+    </div>
+    <table class="table mt-3">
+  <thead>
+    <tr>
+      <th scope="col">Plan Number</th>
+      <th scope="col">Sqft</th>
+      <th scope="col">Floor</th>
+      <th scope="col">Beds</th>
+      <th scope="col">Baths</th>
+      <th scope="col">Price</th>
+      <th scope="col">Image</th>
+
+    </tr>
+  </thead>
+  {{#each plans}}
+  <body>
+    <tr>
+      <td>{{this.planNumber}}</td>
+      <td>{{this.sqft}}</td>
+      <td>{{this.floor}}</td>
+      <td>{{this.beds}}</td>
+      <td>{{this.baths}}</td>
+      <td>{{this.price}}</td>
+      <td><img style="width: 50px;height:50px;" src="/images/{{this._id}}.jpg" alt="image not found"></td>
+    
+    </tr>
+    {{/each}}
+  </body>
+</table>
+</div>
+
+</body>
+</html>

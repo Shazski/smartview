@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+</head>
+<body id="bgimage" style="background-image:linear-gradient(to left,rgba(234,234,191,1),rgba(117,19,93,0.73)),url('https://tse1.mm.bing.net/th?id=OIP.4oPGNjsnvMD9QgN_o1vAmQHaEK&pid=Api&P=0&w=306&h=172');">
+    <section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-center">Add products</h2>
+                <form action="/add-archi-elivations" method="post" enctype="multipart/form-data">
+
+                    <label for="">Plan Number</label>
+                    <input type="text" name="planNumber" class="form-control">
+                    <input type="text" name="archiId" value="{{archiId}}" class="form-control" hidden>
+                    <input type="text" name="contact" value="{{contact}}" class="form-control" hidden>
+
+                    <label for="">Sqft</label>
+                    <select name="sqft" id="" class="form-control">
+										<option>SELECT SQFT</option>
+										<option value="1000">1000 sqft</option>
+										<option value="1200">1200 sqft</option>
+										<option value="1500">1500 sqft</option>
+										<option value="1700">1700 sqft</option>
+										<option value="1900">1900 sqft</option>
+										<option value="2000">2000 sqft</option>
+										<option value="2200">2200 sqft</option>
+										<option value="2500">2500 sqft</option>
+										<option value="2900">2900 sqft</option>
+										<option value="3000">3000 sqft</option>
+										<option value="3200">3200 sqft</option>
+									</select>
+
+                    <label for="">Floor</label>
+                    <select name="floor" id="" class="form-control">
+										<option >SELECT FLOOR</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>		
+									</select>
+
+                    <label for="">Beds</label>
+                    <select name="beds" class="form-control">
+										<option>BEDS</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+										<option value="5">5</option>
+									</select>
+                    <label for="">Baths</label>
+                    <select name="baths" class="form-control">
+										<option>BATHS</option>
+										<option value="1">1</option>
+										<option value="2">2</option>
+										<option value="3">3</option>
+										<option value="4">4</option>
+									</select>
+
+                    <label for="">Image</label>
+                    <input type="file" name="image" class="form-control">
+                    <label for="">plan1 Image</label>
+                    <input type="file" name="plan1" class="form-control">
+                    <label for="">plan2 Image</label>
+                    <input type="file" name="plan2" class="form-control">
+                    <label for="">plan3 Image</label>
+                    <input type="file" name="plan3" class="form-control">
+
+                    <label for="">Price</label>
+                    <input type="number" class="form-control" name="price" id="">
+
+                    <button type="submit" class="btn btn-success mt-4">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
